@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peach Ten Pop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="bg-orbs" aria-hidden="true">
+      <span class="orb orb-a"></span>
+      <span class="orb orb-b"></span>
+      <span class="orb orb-c"></span>
+    </div>
+
+    <main class="app">
+      <section class="topbar">
+        <div class="stats">
+          <article class="stat-card">
+            <span>Score</span>
+            <strong id="score">0</strong>
+          </article>
+          <article class="stat-card">
+            <span>Best</span>
+            <strong id="best">0</strong>
+          </article>
+          <article class="stat-card">
+            <span>Time</span>
+            <strong id="timeLeft">01:30</strong>
+          </article>
+          <article class="stat-card">
+            <span>Selected</span>
+            <strong id="sumValue">0</strong>
+          </article>
+        </div>
+
+        <div class="buttons">
+          <button id="newGameBtn" class="primary">New</button>
+          <button id="clearBtn" class="secondary">Clear</button>
+        </div>
+      </section>
+
+      <section class="board-panel">
+        <div class="board-top">
+          <div id="statusBadge" class="status-badge">Ready</div>
+        </div>
+
+        <div id="board" class="board" aria-label="Peach number board"></div>
+      </section>
+    </main>
+
+    <div id="particleLayer" class="particle-layer" aria-hidden="true"></div>
+    <section id="gameOverOverlay" class="game-over-overlay" hidden>
+      <div id="gameOverRain" class="game-over-rain" aria-hidden="true"></div>
+      <div class="game-over-card">
+        <p class="game-over-eyebrow">Sweet run finished</p>
+        <h2>GAME OVER</h2>
+        <p id="finalScoreText">Final score 0</p>
+        <button id="playAgainBtn" class="primary play-again-btn">Play Again</button>
+      </div>
+    </section>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
